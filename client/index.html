@@ -64,15 +64,13 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
         var n1 = new Negociacao(new Date(), 5, 700);
-        var volume = n1.volume;
 
-        n1._quantidade = 1000;
-
-        console.log(n1.quantidade);
         console.log(n1.data);
-        console.log(n1.valor);
-        console.log(n1.volume);
-        
+
+        n1.data.setDate(12);
+
+        console.log(n1.data);
+
     </script>
 </body>
 </html>
