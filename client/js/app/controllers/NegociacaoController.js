@@ -13,7 +13,9 @@ class NegociacaoController{
 
         event.preventDefault();
 
-        let data = new Date(this._inputData.value.split('-'));
+        let data = new Date(...
+            this._inputData.value.split('')
+        );
         console.log(data);
     }
 }
