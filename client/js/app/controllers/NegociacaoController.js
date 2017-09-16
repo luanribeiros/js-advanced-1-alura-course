@@ -13,8 +13,8 @@ class NegociacaoController{
 
         event.preventDefault();
 
-        let data = new Date(...
-            this._inputData.value
+        let data = new Date(
+            ...this._inputData.value
             .split('')
             .map((item, indice) => item - indice % 2 )
         );
@@ -24,6 +24,9 @@ class NegociacaoController{
             this._inputQuantidade.value,
             this._inputValor.value
         );
-        console.log(negociacao);
+        
+        let diaMesAno = negociacao.data.getDate() 
+            + '/' + (negociacao.data.getMonth() + 1)
+            + '/' + negociacao.data.getFullYear();
     }
 }
