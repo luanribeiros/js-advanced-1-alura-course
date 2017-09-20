@@ -18,6 +18,16 @@ class NegociacoesView {
                 </thead>
                 
                 <tbody>
+                    ${model.negocioes.map( n => {
+                        return ` 
+                            <tr>
+                                <td> ${DateHelper.dataParaTexto(n.data)} </td>
+                                <td> ${n.quantidade} </td>
+                                <td> ${n.valor} </td>
+                                <td> ${n.volume} </td>
+                            </tr>
+                        `;
+                    }).join('')}
                 </tbody>
                 
                 <tfoot>
@@ -27,7 +37,7 @@ class NegociacoesView {
     }
 
     update(model) {
-        this._elemento.innerHTML = this._template();
+        this._elemento.innerHTML = this._template(model);
     }
 
 }
