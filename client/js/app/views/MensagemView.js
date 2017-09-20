@@ -6,7 +6,7 @@ class MensagemView{
 
     _template(model) {
 
-        return `<p class="alert alert-info"> ${model.texto}`;
+        return model.texto ? `<p class="alert alert-info"> ${model.texto}` : '<p></p>';
     }
 
     update(model) {
