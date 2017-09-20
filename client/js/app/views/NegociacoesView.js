@@ -1,10 +1,10 @@
 class NegociacoesView {
     
     constructor() {
-        this._elemento = elemento;
+        this._elemento = this._elemento;
     }
 
-    _template() {
+    _template(model) {
 
         return `
             <table class="table table-hover table-bordered">
@@ -18,7 +18,7 @@ class NegociacoesView {
                 </thead>
                 
                 <tbody>
-                    ${model.negocioes.map( n => {
+                    ${ model.negociacoes.map( n => {
                         return ` 
                             <tr>
                                 <td> ${DateHelper.dataParaTexto(n.data)} </td>
