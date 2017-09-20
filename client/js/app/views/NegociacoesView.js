@@ -1,7 +1,7 @@
 class NegociacoesView {
     
     constructor() {
-        this._elemento = this._elemento;
+        this._elemento = elemento;
     }
 
     _template(model) {
